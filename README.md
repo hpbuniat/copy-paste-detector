@@ -1,4 +1,4 @@
-# copy-paste-detector [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url]
+# copy-paste-detector
 > copy-paste-detector (cpd) is a copy/paste-detector for various languages
 
 ### Supported languages
