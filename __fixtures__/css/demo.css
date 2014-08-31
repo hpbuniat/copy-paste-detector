@@ -1,0 +1,32 @@
+li.inline #foo {
+  background: rgba(234, 212, 200, 0.5) url("something.png");
+  display: inline;
+  padding-left: 3px;
+  padding-right: 7px;
+  border-right: 1px dotted #066;
+}
+
+li.last.first {
+  display: inline;
+  padding-left: 3px !important;
+  padding-right: 3px;
+  border-right: 0px;
+}
+
+@media print {
+    li.inline {
+      color: black;
+    }
+}
+
+#bar {
+    background: rgba(234, 212, 200, 0.5) url("something.png");
+    display: inline;
+    padding-left: 3px;
+    padding-right: 7px;
+    border-right: 1px dotted #066;
+}
+
+.clearfix:after {
+    clear: both;
+}
