@@ -8,7 +8,7 @@ module.exports = class Collector
 
   collect: (directory, depth, include, exclude) ->
     files = wrench.readdirSyncRecursive(directory)
-    include = "." unless include
+    include = "*" unless include
     exclude = "" unless exclude
 
     includes = include.split(",").trim()
