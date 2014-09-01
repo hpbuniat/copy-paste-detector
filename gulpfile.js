@@ -13,7 +13,7 @@ var gulp = require('gulp'),
         build: ''
     };
 /*BUILD COFFEE*/
-gulp.task('coffee:build', function (event) {
+gulp.task('coffee:build', function () {
     return gulp.src(sources.coffee)
         .pipe(plumber())
         .pipe(coffee())
@@ -32,11 +32,11 @@ gulp.task('lint', function () {
     return gulp.src(sources.coffee)
         .pipe(plumber())
         .pipe(coffeelint())
-        .pipe(coffeelint.reporter())
+        .pipe(coffeelint.reporter());
 });
 
 /*WATCH COFFEE*/
-gulp.task('coffee:watch', ['coffee:build'], function (event) {
+gulp.task('coffee:watch', ['coffee:build'], function () {
     gulp.watch(sources.coffee, ['all']);
 });
 
