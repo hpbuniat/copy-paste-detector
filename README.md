@@ -1,4 +1,4 @@
-# copy-paste-detector
+# copy-paste-detector [![Version](http://img.shields.io/npm/v/copy-paste-detector.svg)](https://www.npmjs.org/package/copy-paste-detector) [![Build Status](https://travis-ci.org/hpbuniat/copy-paste-detector.svg?branch=master)](https://travis-ci.org/hpbuniat/copy-paste-detector) [![Dependencies](https://david-dm.org/hpbuniat/copy-paste-detector.png)](https://david-dm.org/hpbuniat/copy-paste-detector) [![Code Climate](https://codeclimate.com/github/hpbuniat/copy-paste-detector/badges/gpa.svg)](https://codeclimate.com/github/hpbuniat/copy-paste-detector)
 > copy-paste-detector (cpd) is a copy/paste-detector for various languages
 
 ### Supported languages
