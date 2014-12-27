@@ -1,5 +1,6 @@
 _ = require "lodash"
 util = require "util"
+which = require "which"
 AbstractParser = require "./abstract"
 require 'shelljs/global'
 
@@ -39,4 +40,4 @@ module.exports.PHP = class ParsePHP extends AbstractParser
     token in @ignoreTokens
 
   registers: (mime, extension) ->
-    extension in ['php', 'php3', 'php4', 'php5']
+    !!which.sync('php') && extension in ['php', 'php3', 'php4', 'php5']
