@@ -15,10 +15,7 @@
   "bugs": {
     "url": "https://github.com/hpbuniat/copy-paste-detector/issues"
   },
-  "license": {
-    "type": "BSD",
-    "url": "https://github.com/hpbuniat/copy-paste-detector/blob/master/LICENSE"
-  },
+  "license": "BSD-3-Clause",
   "bin": {
     "cpd": "./bin/cpd"
   },
