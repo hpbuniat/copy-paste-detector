@@ -11,11 +11,12 @@ module.exports.PHP = class ParsePHP extends AbstractParser
 
   constructor: () ->
     @weigth = 1
-    @varToken = parseInt(exec("php -r \"echo T_VARIABLE;\"", {silent:true}).output)
-
     ignore = "T_INLINE_HTML,T_COMMENT,T_DOC_COMMENT,T_OPEN_TAG,T_OPEN_TAG_WITH_ECHO,T_CLOSE_TAG,T_WHITESPACE,T_USE,T_NS_SEPARATOR"
-    getIgnore = util.format "php -r \"echo json_encode([%s]);\"", ignore
-    @ignoreTokens = JSON.parse(exec(getIgnore, {silent:true}).output)
+    @foundphp = which.sync("php")
+    if @foundphp
+        @varToken = parseInt(exec("php -r \"echo T_VARIABLE;\"", {silent:true}).output)
+        getIgnore = util.format "php -r \"echo json_encode([%s]);\"", ignore
+        @ignoreTokens = JSON.parse(exec(getIgnore, {silent:true}).output)
 
   parse:  (file, content, fuzzy) ->
     stack = []
@@ -40,4 +41,4 @@ module.exports.PHP = class ParsePHP extends AbstractParser
     token in @ignoreTokens
 
   registers: (mime, extension) ->
-    !!which.sync('php') && extension in ['php', 'php3', 'php4', 'php5']
+    !!@foundphp && extension in ['php', 'php3', 'php4', 'php5']
